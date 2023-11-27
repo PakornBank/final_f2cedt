@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import createProblem from "./createProblem.js";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 export default function CreateProblem({ fetchProblems, problems }) {
   const [title, setTitle] = useState("");
@@ -54,13 +56,13 @@ export default function CreateProblem({ fetchProblems, problems }) {
         required
       />
 
-      <textarea
-        className="border p-2 rounded mb-4 w-full"
+      <ReactQuill
+        style={{ height: "300px", marginBottom: "60px" }}
         placeholder="Problem Description"
-        onChange={(e) => setDescription(e.target.value)}
+        onChange={setDescription}
         value={description}
         required
-      ></textarea>
+      ></ReactQuill>
 
       <input
         id="problemDifficulty"

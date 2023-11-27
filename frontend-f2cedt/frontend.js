@@ -208,8 +208,6 @@ function initializePage() {
     fetch(`${apiUrl}/get-user/${uid}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(uid);
-        console.log(`${apiUrl}/get-user/${uid}`);
         document.getElementById("profileName").textContent = data.name;
         const initial = data.name.charAt(0).toUpperCase();
         document.getElementById("profileInitial").textContent = initial;
