@@ -255,7 +255,6 @@ app.delete("/delete-user/:uid", async (req, res) => {
 
 function connectToMongo() {
   try {
-    //ผมรู้ครับว่าไม่ควรอัพ mongo password, but who care?
     const mongoUri =
       "mongodb+srv://codingbt:cedtcoding@cluster0.eroiiuw.mongodb.net/";
     mongoose
